@@ -11,6 +11,8 @@ while userInput != "quit":
         break
     try:
         addedInventory = int(userInput)
+        if addedInventory < 0:
+            warning("Negative number not accepted, try again!")
     except:
-        warnUser(f"Input of type {str(type(userInput))} not accepted, try again!")
+        warning(f"Input of type {str(type(userInput))} not accepted, try again!")
         continue

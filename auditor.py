@@ -13,6 +13,8 @@ while userInput != "quit":
         addedInventory = int(userInput)
         if addedInventory < 0:
             warning("Negative number not accepted, try again!")
+        else:
+            inventory = int(inventory) + int(addedInventory)
     except:
         warning(f"Input of type {str(type(userInput))} not accepted, try again!")
         continue

@@ -18,3 +18,6 @@ while userInput != "quit":
     except:
         warning(f"Input of type {str(type(userInput))} not accepted, try again!")
         continue
+    if inventory > 500:
+        print("Inventory has overstocked!")
+        break
